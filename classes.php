@@ -14,13 +14,13 @@ abstract class Vehicle
         $this->model = $model;
         $this->numberOfWheels = $numberOfWheels;
     }
-    abstract protected function getPropertys();
+    abstract protected function getProperties();
 }
 
 
 class Car extends Vehicle
 {
-    public function getPropertys()
+    public function getProperties()
     {
         return "Araba Taşıtına Ait Öznitelikler Şunlardır:\n" . "Plaka No: " . $this->plate . "\nMarka: " . $this->name . "\nModel: " . $this->model . "\nTekerlek Sayısı: " . $this->numberOfWheels;
     }
@@ -28,7 +28,7 @@ class Car extends Vehicle
 
 class Motorcycle extends Vehicle
 {
-    public function getPropertys()
+    public function getProperties()
     {
         return "Motorsiklet Taşıtına Ait Öznitelikler Şunlardır:\n" . "Plaka No: " . $this->plate . "\nMarka: " . $this->name . "\nModel: " . $this->model . "\nTekerlek Sayısı: " . $this->numberOfWheels;
     }
@@ -43,7 +43,7 @@ class Plane extends Vehicle
         $this->wingspan = $wingspan;
     }
 
-    public function getPropertys()
+    public function getProperties()
     {
         return "Uçak Taşıtına Ait Öznitelikler Şunlardır:\n" . "Marka: " . $this->name . "\nModel: " . $this->model . "\nKanat Açıklığı: " . $this->wingspan;
     }
